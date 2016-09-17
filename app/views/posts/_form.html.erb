@@ -1,0 +1,5 @@
+<%= form_for :post, url: '/posts', :html => {:class => 'new-post-form'} do |f| %>
+	<%= f.text_area :body, placeholder: 'text' %><br>
+	<%= f.text_field :emoji, placeholder: 'emoji' %><br>
+	<%= f.submit "Submit" %>
+<% end %>
