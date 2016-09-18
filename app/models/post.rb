@@ -7,4 +7,8 @@ class Post < ApplicationRecord
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
 	validates :emoji, presence: true
+
+	def self.most_recent
+    Post.order(created_at: :desc)
+  end
 end
