@@ -1,6 +1,6 @@
 <%= form_for :post, url: '/posts', html: { multipart: true } do |f| %>
 	<%= f.text_area :body, placeholder: 'text' %><br>
-	<%= f.text_field :emoji, placeholder: 'emoji' %><br>
-	<%= f.file_field :image, placeholder: 'picture' %><br>
+	<%= f.text_area :emoji, placeholder: 'emoji (command + ctrl + spacebar)' %><br>
+	<%= f.file_field :image%><br>
 	<%= f.submit "Submit" %>
 <% end %>

@@ -1,10 +1,16 @@
-<h1>HELLO <%= @user.username %></h1>
+<h1>😉 <%= @user.username %></h1>
 
-Your Posts:<br>
+<h3>Your Posts:</h3>
 <% if @posts %>
 	<ul>
 	<% @posts.each do |post| %>
-	<li><%= link_to post.body, post_path(post.id) %></li>
+	<li>
+		<%= post.created_at.in_time_zone('Eastern Time (US & Canada)').strftime('%B %e, %Y, %I:%M %P')%> <br>
+	  <%= link_to post.body, post_path(post.id) %> <%= post.emoji %> <br> 
+	  <% if post.image.file? %>
+	    <%= image_tag post.image.url(:thumb) %>
+	  <% end %><br><br>
+	</li>
 	<% end%>
 	</ul>
 <% else %>
