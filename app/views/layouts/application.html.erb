@@ -10,8 +10,8 @@
 
   <body>
     <nav>
-    <ul>
-       <li><%= link_to 'Home', root_path %></li>
+    <ul id="top-nav">
+       <li ><%= link_to 'Home', root_path %></li>
         <% if current_user %>
         	<li><%= link_to current_user.username, user_path(current_user.id) %></li>
          	<li><%= link_to 'Make New Post', new_post_path %></li>
@@ -21,7 +21,6 @@
            <li><%= link_to 'Log In', login_path %></li>
          <% end %>
       </ul>
-        <strong>Search for users</strong>
         <%= react_component 'SearchBar' %>
     </nav>
     <%= yield %>
