@@ -25,8 +25,8 @@ li {
 }
 
 #top-nav {
-  background: #33F9FF;
-  height: 80px;
+  background: #33B0FF;
+  height: 87px;
   width: 100%;
   min-width: 768px;
   top: 0;
@@ -51,4 +51,22 @@ li {
   font-size: 14px;
   outline: none;
 }
+
+#post-box {
+  position: absolute;
+  height: 160px;
+  width: 232px;
+  max-width: 232px;
+  text-align: center;
+  background: #00A5D5;
+  padding: 6px;
+  border-radius: 6px
+}
+
+#nav-link-color a{
+  color: #FCFAFA;
+  margin-left: 2px;
+  font-size: 1.1em;
+}
+
 
