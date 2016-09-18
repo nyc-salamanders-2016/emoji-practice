@@ -6,9 +6,16 @@ class Post < ApplicationRecord
 
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
-	validates :emoji, presence: true
+	validate :emoji_or_image
 
 	def self.most_recent
     Post.order(created_at: :desc)
   end
+
+  private
+  	def emoji_or_image
+  		if emoji.blank? && image.blank?
+  			errors[:base] << "Add emoji, image, or both."
+  		end
+  	end
 end
