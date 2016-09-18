@@ -2,11 +2,12 @@
 <ul>
 <% @posts.each do |post| %>
 	<li>
-		<%= post.user.username %><br>
+		<%= link_to post.user.username, user_path(post.user.id) %><br> 
+		<%= post.created_at.in_time_zone('Eastern Time (US & Canada)').strftime('%B %e, %Y, %I:%M %P')%> <br>
 	  <%= link_to post.body, post_path(post.id) %> <%= post.emoji %> <br> 
 	  <% if post.image.file? %>
 	    <%= image_tag post.image.url(:thumb) %>
-	  <% end %><br><br>
+	  <% end %><br>
 	</li>
 <% end %>
 </ul>
