@@ -1,5 +1,6 @@
-<%= form_for :post, url: '/posts', :html => {:class => 'new-post-form'} do |f| %>
+<%= form_for :post, url: '/posts', html: { multipart: true } do |f| %>
 	<%= f.text_area :body, placeholder: 'text' %><br>
 	<%= f.text_field :emoji, placeholder: 'emoji' %><br>
+	<%= f.file_field :image, placeholder: 'picture' %><br>
 	<%= f.submit "Submit" %>
 <% end %>

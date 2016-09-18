@@ -1,4 +1,5 @@
 <h1>Posts</h1>
 	<strong><%= @post.body %></strong>
-	<%= @post.emoji %><br>
+	<%= @post.emoji %>
+	<%= image_tag @post.image.url(:medium) %>
 
