@@ -2,10 +2,11 @@
 <ul>
 <% @posts.each do |post| %>
 	<li>
+		<%= post.user.username %><br>
 	  <%= link_to post.body, post_path(post.id) %> <%= post.emoji %> <br> 
 	  <% if post.image.file? %>
 	    <%= image_tag post.image.url(:thumb) %>
-	  <% end %>
+	  <% end %><br><br>
 	</li>
 <% end %>
 </ul>
