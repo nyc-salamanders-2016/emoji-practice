@@ -1,13 +1,13 @@
 <h1>See posts:</h1>
 <ul>
 <% @posts.each do |post| %>
-	<li>
+	<li id="post-box">
 		<%= link_to post.user.username, user_path(post.user.id) %><br> 
 		<%= post.created_at.in_time_zone('Eastern Time (US & Canada)').strftime('%B %e, %Y, %I:%M %P')%> <br>
 	  <%= link_to post.body, post_path(post.id) %> <%= post.emoji %> <br> 
 	  <% if post.image.file? %>
 	    <%= image_tag post.image.url(:thumb) %>
-	  <% end %><br>
+	  <% end %>
 	</li>
 <% end %>
 </ul>

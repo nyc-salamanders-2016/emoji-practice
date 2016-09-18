@@ -52,21 +52,17 @@ li {
   outline: none;
 }
 
-#post-box {
-  position: absolute;
-  height: 160px;
-  width: 232px;
-  max-width: 232px;
-  text-align: center;
-  background: #00A5D5;
-  padding: 6px;
-  border-radius: 6px
-}
-
 #nav-link-color a{
   color: #FCFAFA;
   margin-left: 2px;
   font-size: 1.1em;
+}
+
+#post-box{
+  border: double;
+  padding: 4px;
+  border-spacing: 10px;
+  margin: 0 0 5px 0;;
 }
 
 
